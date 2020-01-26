@@ -1,0 +1,45 @@
+@startuml
+    File <--> Uploader: uploader handels the upload of files
+    class File{
+        -fileSize:int
+        -creationDate:int
+        -type:String
+        -userID:int
+        -userName:String
+        -tags:String[]
+        -filename:String
+        -description:String
+        -folderpath:String
+        --
+        +__construct(dir:String, filename:String)<<constructor>>
+        +fileExists():bool
+        -evaluateType():void
+        +deleteFile():bool
+        +addFile():bool
+        +updateFileInfo():bool
+        +renameFile(name:String):bool
+        +setTags(tags:String[])
+        +setDescription(description:String)
+        +getDescription():String
+        +getTags():String[]
+        +getFileContent():String
+        +getFileName():String
+        +getFolderPath():String
+        +getFullPath():String
+        +getFileSize():int
+        +getCreationDate():int
+        +getType():String
+        
+    }
+
+    class Uploader{
+        -errorCode:int
+        -targetDir:String
+        --
+        +__construct(FileSuperGlobal:String[])<<constructor>>
+        +setTargetDir(targetDir:String):bool
+        +moveFiletoTarget():bool
+        -targetFolderExist():bool
+
+    }
+@enduml

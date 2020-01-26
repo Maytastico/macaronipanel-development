@@ -1,0 +1,21 @@
+ @startuml
+ entity Files{
+        *id:int [Primary Key]
+        *tags:TEXT
+        *description:TEXT
+        *fileName:TEXT
+        *folderPath:TEXT
+        *user_id [Foreign Key]
+    } 
+
+    entity Users{
+        *file: int
+    }
+
+    Files ..|| Users
+
+    note right of Files
+        This Diagram is called entity relation model.
+        It showes how the database tables are connected altogether.
+    end note 
+@enduml
