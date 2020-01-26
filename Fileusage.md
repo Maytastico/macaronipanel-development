@@ -25,14 +25,13 @@ For examples:
 - Folderpath
   - An absolute path to the file. It does not contain the foldername of were the MacaroniPanel is saved
 
+![Files Entity Relationship Model](https://github.com/MacaroniDamage/macaronipanel-development/blob/master/fileER/fileER.png)
+
 ## The File class
 The file class is able to add, remove and edit the information of a file.
 
-```plantuml
-@startuml
-Alice -> Bob: test
-@enduml
-```
+![file](https://github.com/MacaroniDamage/macaronipanel-development/blob/master/file/file.png)
+
 # **Userspace**
 The userspace contains files that were uploaded by the user. A use-case would be the upload of profile pictures.
 
