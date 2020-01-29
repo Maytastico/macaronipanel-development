@@ -1,5 +1,6 @@
 @startuml
-    File <--> Uploader: uploader handels the upload of files
+    File <--> Uploader
+    File --> Config
     class File{
         -fileSize:int
         -creationDate:int
@@ -18,8 +19,9 @@
         +addFile():bool
         +updateFileInfo():bool
         +renameFile(name:String):bool
-        +setTags(tags:String[])
-        +setDescription(description:String)
+        +setTags(tags:String[]):void
+        +setDescription(description:String):void
+        +setUser(userID:int):void
         +getDescription():String
         +getTags():String[]
         +getFileContent():String
@@ -42,4 +44,14 @@
         -targetFolderExist():bool
 
     }
+
+    class Config{
+        +folder:String
+    }
+
+    note left
+        Contains the 
+        path were the 
+        panel is located
+    end note
 @enduml
