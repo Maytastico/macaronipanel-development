@@ -1,6 +1,6 @@
  @startuml
  entity Files{
-        *id:int [Primary Key]
+        *id:int [Auto Increment][Primary Key]
         *tags:TEXT
         *description:TEXT
         *fileName:TEXT
@@ -9,13 +9,14 @@
     } 
 
     entity Users{
-        *file: int
+        *user_id:int [Auto Increment][Primary Key]
+        *username:VARCHAR(256)
+        *password:VARCHAR(256)
+        *email:VARCHAR(256)
+        *lastLogin:TIMESTAMP
+        *sessionID:VARCHAR(32)
+        *role_id:int
     }
 
     Files ..|| Users
-
-    note right of Files
-        This Diagram is called entity relation model.
-        It showes how the database tables are connected altogether.
-    end note 
 @enduml
