@@ -51,7 +51,7 @@ Adding additional information to the file isn't nessesary but I will add a descr
 
 `$file->setDescription("This is manuel when he traveled to New York");`
 
-Adding tags to this picture can be a bit tricky because this method requiers an array as a parameter and there are two methods or more for forward an array to a method.
+Adding tags to this picture can be a bit tricky because this method requiers an array as a parameter and there are two methods or more for forwarding an array to a method.
 
 First method:
 
@@ -64,7 +64,7 @@ Second method:
 `$file->setTags(array("Manuel", "Traveling", "Fun"));`
 
 Futhermore the class gives you the possibility to add the file to a user, so the user is able to see the file inside its file manager. It is nessesary to put in an number as a parameter.
-If you don't know the id of a user, you can user the method `User:fetchIDfromUsername()`
+If you don't know the id of a user, you can use the method `User:getUserIDFromUsername()`. Every username is unique and can't be replicated.
 
 When you know the user id
 
@@ -72,7 +72,7 @@ When you know the user id
 
 When the user id is unknown
 
-`$file->setUser(User:fetchIDfromUsername("Manuel"))`
+`$file->setUser(User:getUserIDFromUsername("Manuel"))`
 
 If you are ready to add the file, you can add the file to the database. 
 
