@@ -3,6 +3,7 @@
   - [The file class](#the-file-class)
     - [Examples](#examples)
       - [Adding a file](#adding-a-file)
+      - [Remove a File](#remove-a-file)
 - [**Userspace**](#userspace)
 - [**Modules**](#modules)
   - [Module Structure](#module-structure)
@@ -77,6 +78,22 @@ When the user id is unknown
 If you are ready to add the file, you can add the file to the database. 
 
 `$file->addFile();`
+
+#### Remove a File
+The first step is constructing the object with the file you want to delete. I take as an example the picture **manuel.png** from the userdirectory of **marcus**
+
+`$file = new File("/userfiles/marcus", "manuel.png");`
+
+If the object was contructed, you can try to delete this file. However you schould test whether this process was successful
+
+`$file->deleteFile();`
+
+An example for an error handler: 
+
+`if($file->deleteFile() === true){`<br>
+    `echo "Deleting file was successful";`<br>
+`}`
+
 
 # **Userspace**
 The userspace contains files that were uploaded by the user. A use-case would be the upload of profile pictures.
