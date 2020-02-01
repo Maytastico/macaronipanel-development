@@ -3,7 +3,7 @@
   - [The file class](#the-file-class)
     - [Examples](#examples)
       - [Adding a file](#adding-a-file)
-      - [Remove a File](#remove-a-file)
+      - [Remove a Files](#remove-a-files)
 - [**Userspace**](#userspace)
 - [**Modules**](#modules)
   - [Module Structure](#module-structure)
@@ -79,7 +79,7 @@ If you are ready to add the file, you can add the file to the database.
 
 `$file->addFile();`
 
-#### Remove a File
+#### Remove a Files
 The first step is constructing the object with the file you want to delete. I take as an example the picture **manuel.png** from the userdirectory of **marcus**
 
 `$file = new File("/userfiles/marcus", "manuel.png");`
