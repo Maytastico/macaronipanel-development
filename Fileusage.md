@@ -17,7 +17,8 @@ A security issue with files in MacaroniPanel is that everyone who knows where th
 A file inside MacaroniPanel is represented inside the database and is stored inside the Panel, on the harddisk. There are some options that can be set inside the database.
 For examples:
 - Tags 
-  - Contains information that can be searched by a user
+  - This row contains more than one Tag. So every Tag is seperated with a comma.
+    - Contains information that can be searched by a user
 - Description 
   - A text that describes a picture
     - Can be used for a picture galery
@@ -91,7 +92,7 @@ If the object was contructed, you can try to delete this file. However you schou
 An example for an error handler: 
 
 `if($file->deleteFile() === true){`<br>
-    `echo "Deleting file was successful";`<br>
+`echo "Deleting file was successful";`<br>
 `}`
 
 

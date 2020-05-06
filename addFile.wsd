@@ -1,6 +1,6 @@
 @startuml
     actor User
-
-    User -> userFile|File:File
+    create "userFile:File"
+    User -> "userFile:File":
     
 @enduml

@@ -13,7 +13,8 @@
         -folderpath:String
         --
         +__construct(dir:String, filename:String)<<constructor>>
-        +fileExists():bool
+        +fileExistsInDir():bool
+        +fileExistsInDatabase():bool
         -evaluateType():void
         +deleteFile():bool
         +addFile():bool

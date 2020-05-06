@@ -1,14 +1,13 @@
  @startuml
- entity Files{
+ entity files{
         *id:int [Auto Increment][Primary Key]
         *tags:TEXT
         *description:TEXT
         *fileName:TEXT
         *folderPath:TEXT
-        *user_id [Foreign Key]
     } 
 
-    entity Users{
+    entity users{
         *user_id:int [Auto Increment][Primary Key]
         *username:VARCHAR(256)
         *password:VARCHAR(256)
@@ -18,5 +17,11 @@
         *role_id:int
     }
 
-    Files ..|| Users
+    entity user_has_file{
+        *file_id:int[Foreign Key]
+        *user_id:int[Foreign Key]
+    }
+
+    user_has_file ..|| files
+    user_has_file ..|| users
 @enduml
